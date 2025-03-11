@@ -8,6 +8,9 @@ sudo apt-get install -y git
 chmod +x ./ros_humble_jammy.sh
 ./ros_humble_jammy.sh desktop
 
+# Change Directory
+cd ~
+
 # Download PX4
 git clone https://github.com/PX4/PX4-Autopilot.git
 cd PX4-Autopilot
@@ -29,7 +32,7 @@ pip install --user -U empy==3.3.4 pyros-genmsg setuptools==68
 
 # Install ROS 2 Dependencies
 cd ..
-git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
 cd Micro-XRCE-DDS-Agent
 mkdir build
 cd build
