@@ -5,8 +5,8 @@ sudo apt-get install -y git
 
 
 # Install ROS 2 Humble
-chmod +x ./ros_humble_jammy.sh
-./ros_humble_jammy.sh desktop
+#chmod +x ./ros_humble_jammy.sh
+#./ros_humble_jammy.sh desktop
 
 # Change Directory
 cd ~

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install ROS Humble Desktop
-./ros_humble_jammy.sh
+# ./ros_humble_jammy.sh
 
 # Create ROS WS
 mkdir -p px4_ws/src
