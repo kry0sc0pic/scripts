@@ -2,8 +2,8 @@
 
 if [ "$1" == "help" ]; then
     echo "Usage: $0 [desktop]"
-    echo "  desktop: Install ROS 2 Humble Desktop"
-    echo "  base: Install ROS 2 Humble Base"
+    echo "  desktop: Install ROS 2 Jazzy Desktop"
+    echo "  base: Install ROS 2 Jazzy Base"
     exit 0
 fi
 
@@ -19,9 +19,15 @@ locale  # verify settings
 
 sudo apt install software-properties-common -y
 sudo add-apt-repository universe
+
+sudo apt update && sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
 sudo apt update -y
 sudo apt install ros-dev-tools -y
+
 sudo apt update -y
 sudo apt upgrade -y
 
