@@ -59,7 +59,7 @@ cd px4_ros_com
 git switch release/v1.15
 
 # Build Workspace
-cd ..
+cd ../..
 colcon build
 
 # Download QGroundControl Daily
