@@ -50,7 +50,7 @@ cd px4_ws/src
 # Clone PX4
 git clone https://github.com/PX4/px4_msgs.git
 cd px4_msgs
-git switch release/v1.15
+git checkout release/1.15
 
 # Clone PX4 Firmware
 cd ..
